@@ -239,15 +239,84 @@
                     <p>Le Dimanche : sur demande.</p>
                 </div>
 
-                <div class="phone">
-                    <h3>Numéro de téléphone et adresse mail.</h3>
-                    <p>Téléphone : 06 15 16 55 38</p>
-                    <p>Mail : charlenecoachingcsport@gmail.com</p>
-                    <p>Mes disponibilités vous seront communiquées lors de la prise de rendez-vous par téléphone ou par
-                        mail.</p>
+                <div class="contact-form">
+                    <h3>Me contacter</h3>
+
+                    <form id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prenom">Prénom *</label>
+                                <input type="text" id="prenom" name="prenom" required minlength="2"
+                                    autocomplete="given-name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nom">Nom *</label>
+                                <input type="text" id="nom" name="nom" required minlength="2"
+                                    autocomplete="family-name">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="age">Âge *</label>
+                                <input type="number" id="age" name="age" required min="10" max="120"
+                                    inputmode="numeric">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preference">Contact préféré *</label>
+                                <select id="preference" name="preference" required>
+                                    <option value="" selected disabled>Choisir...</option>
+                                    <option value="email">Email</option>
+                                    <option value="telephone">Téléphone</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row" id="contactFields">
+                            <div class="form-group" id="emailGroup" style="display:none;">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" autocomplete="email">
+                            </div>
+
+                            <div class="form-group" id="telGroup" style="display:none;">
+                                <label for="telephone">Téléphone *</label>
+                                <input type="tel" id="telephone" name="telephone" autocomplete="tel" inputmode="tel"
+                                    placeholder="06 12 34 56 78">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="typeCoaching">Type de coaching *</label>
+                            <select id="typeCoaching" name="typeCoaching" required>
+                                <option value="" selected disabled>Choisir...</option>
+                                <option value="performance">Performance</option>
+                                <option value="sante">Santé</option>
+                                <option value="football">Football</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message (facultatif)</label>
+                            <textarea id="message" name="message" rows="5"
+                                placeholder="Expliquez brièvement votre objectif, vos contraintes, disponibilités..."></textarea>
+                        </div>
+
+                        <p class="form-hint">* Champs obligatoires</p>
+
+                        <button type="submit" class="btn-submit">Envoyer</button>
+
+                        <p class="form-status" id="formStatus" aria-live="polite"></p>
+                    </form>
                 </div>
-                <img src="img/localisation.png" alt="Image de Localisation"
-                    style="width: 80%; border-radius: 8px; object-fit: cover; height : 610px; display: block; margin-left: auto; margin-right: auto; ">
+
+                <div class="localisation-map">
+                    <h3>Mon rayon d'action</h3>
+
+                    <img src="img/localisation.png" alt="Rayon d'action autour d'Auragne">
+                </div>
+
 
         </section>
     </main>
