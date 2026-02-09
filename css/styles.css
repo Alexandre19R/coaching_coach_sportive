@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fond texturé */
+body {
+    font-family: "Titillium Web", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../pink-white-background-with-watercolor-background.jpg');
+    /* Texture */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background-image: url('../img/montagne.JPG');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 120px 40px 120px;
+
+}
+
+/* Logo + titre sur la même ligne */
+.header-top {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    margin-top: -80px;
+}
+
+.logo {
+    width: 120px;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin: 0;
+    font-weight: bold;
+    color: #074389;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #1dacff;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 25px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #1565c0;
+}
+
+/* Menu déroulant */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1976d2;
+    min-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li:hover>ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+}
+
+nav ul li ul li a {
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+nav ul li ul li a:hover {
+    background-color: #1565c0;
+}
+
+section {
+    padding: 50px 20px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    max-width: 1100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: -25px;
+    text-align: center;
+    color: #093d71;
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+
+/* Section Services */
+/* ===== SAP (Service à la personne) - Intégration pro ===== */
+
+.sap-banner {
+  max-width: 1100px;
+  margin: 0 auto 22px;
+  padding: 14px 16px;
+  background-color: rgba(196, 238, 255, 0.626);
+  border-radius: 12px;
+  border-left: 6px solid #1976d2;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.sap-banner__left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sap-logo-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  background: #fff;
+  padding: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+  overflow: hidden;
+  flex: 0 0 46px; /* taille verrouillée */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sap-logo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(3); /* zoom */
+  transform-origin: center;
+}
+
+
+.sap-banner__title {
+  margin: 0;
+  font-weight: 700;
+  color: #093d71;
+  font-size: 18px;
+}
+
+.sap-banner__subtitle {
+  margin: 2px 0 0;
+  color: #054065;
+  font-size: 14px;
+}
+
+.sap-banner__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: #1565c0;
+  white-space: nowrap;
+}
+
+.sap-banner__chev {
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* Popover */
+.sap-popover {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 12px);
+  width: min(700px, 96vw);
+  background: #fff;
+  color: #054065;
+  border-radius: 12px;
+  padding: 16px 16px;
+  border: 1px solid rgba(25,118,210,0.25);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.16);
+  display: none;
+  z-index: 60;
+}
+
+.sap-popover h4 {
+  margin: 0 0 10px;
+  color: #1976d2;
+  font-size: 18px;
+}
+
+.sap-popover p {
+  margin: 0 0 10px;
+}
+
+.sap-popover ul {
+  margin: 0 0 10px;
+  padding-left: 18px;
+}
+
+.sap-popover li {
+  margin-bottom: 6px;
+}
+
+.sap-popover__note {
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+/* Bouton fermer */
+.sap-popover__close {
+  margin-top: 10px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sap-popover__close:hover {
+  background: #1565c0;
+}
+
+/* Etat ouvert */
+.sap-banner.is-open .sap-popover {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sap-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .sap-banner__cta {
+    align-self: flex-end;
+  }
+}
+
+/* Container principal du slider */
+.slider-container {
+  position: relative;
+  width: 500px;
+  margin: 30px auto;
+  border-radius: 12px;
+}
+
+/* Frame qui contient toutes les slides */
+.slider-frame {
+  overflow: hidden;
+  width: 100%; /* prend toute la largeur du container */
+}
+
+/* Slider interne qui se déplace avec Anime.js */
+.slider-inner {
+  display: flex;
+  transition: none; /* l'animation est gérée par Anime.js */
+}
+
+.service-card {
+     flex: 0 0 100%; /* prend exactement la largeur du cadre */
+  box-sizing: border-box; /* padding inclus dans la largeur */
+  margin: 0; /* pas de marge pour le slider exact */
+  padding: 20px;
+  background-color: rgba(196, 238, 255, 0.626);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.service-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    color: #1976d2;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.service-card .pricing {
+    font-weight: 700;
+    color: #1565c0;
+}
+
+/* Boutons de navigation */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #1976d2;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-btn.left { left: -20px; }
+.slider-btn.right { right: -20px; }
+
+/* Responsive : cadre plus petit sur mobile */
+@media (max-width: 768px) {
+  .slider-container {
+    width: 90%; /* prend presque toute la largeur de l'écran */
+  }
+}
+
+/* Frise Chronologique */
+.timeline {
+    position: relative;
+    padding: 20px;
+    margin: 50px 0;
+    border-left: 3px solid #1976d2;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+.timeline-item:before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #1976d2;
+    box-shadow: 0 0 0 3px #fff;
+}
+
+.timeline-item h3 {
+    color: #1976d2;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.timeline-item p {
+    font-size: 16px;
+    color: #054065;
+}
+
+.timeline-item img {
+    width: 400px;
+    height: 200px;
+    border-radius: 8px;
+    margin-right: 20px;
+    margin-top: 10px;
+    object-fit: cover;
+}
+.external-link{
+    text-decoration: none;
+    color: #1976d2;
+}
+
+/* Section Contact et Localisation */
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-info .address h3,
+.contact-info .phone h3 {
+    color: #1a6ec3;
+    margin-bottom: 15px;
+}
+
+/* ===== FOOTER ===== */
+
+.site-footer {
+    background-color: #1976d2;
+    color: #fff;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-col h3 {
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    margin: 6px 0;
+    line-height: 1.4;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    text-decoration: underline;
+}
+
+/* Instagram */
+.footer-social img {
+    width: 36px;
+    margin-top: 10px;
+    transition: transform 0.2s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.15);
+}
+
+/* Bas de footer */
+.footer-bottom {
+    text-align: center;
+    padding: 15px;
+    background-color: #1565c0;
+    font-size: 14px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
+
+/* Responsive mobile */
+@media (max-width: 480px) {
+    .popup-content {
+        width: 95%;
+        padding: 18px;
+    }
+
+    .popup-content textarea {
+        min-height: 100px;
+    }
+}
+
+
+/*  --- Responsive Design --- */
+
+/* Tablettes */
+@media (max-width: 1024px) {
+    header {
+        padding: 100px 20px;
+        background-position: center top;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    .services {
+        justify-content: center;
+    }
+
+    .service-card {
+        width: 45%;
+    }
+
+    .timeline-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+    header {
+        padding: 60px 15px;
+        text-align: center;
+    }
+
+    header .logo {
+        position: static;
+        margin: 0 auto 10px;
+        display: block;
+    }
+
+    header h1 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 90%;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .timeline {
+        border-left: none;
+        border-top: 3px solid #1976d2;
+        padding-top: 20px;
+    }
+
+    .timeline-item {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .timeline-item:before {
+        display: none;
+    }
+
+    .timeline-item img {
+        width: 100%;
+        height: auto;
+    }
+}

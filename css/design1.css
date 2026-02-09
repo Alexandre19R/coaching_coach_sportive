@@ -1,0 +1,151 @@
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  color: rgb(12, 141, 228);
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('/img/hero-fitness.jpg') center/cover no-repeat;
+  transform: scale(1);
+  transition: transform 0.8s ease;
+  filter: brightness(0.7);
+}
+
+.hero.scrolled .hero-bg {
+  transform: scale(1.07);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.btn.primary {
+  display: inline-block;
+  background: #ff5a3c;
+  color: #fff;
+  padding: 0.9rem 1.7rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.btn.primary:hover {
+  background: #ff7d63;
+}
+
+.program-grid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.09);
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.progress-ring {
+  --size: 120px;
+  --value: 72;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: conic-gradient(#ff5a3c calc(var(--value) * 1%), #ddd 0%);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.coach-card {
+  display: flex;
+  gap: 1rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 14px;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.coach-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.badge {
+  background: #ff5a3c;
+  color: #fff;
+  padding: .2rem .6rem;
+  border-radius: 50px;
+  font-size: .75rem;
+}
+
+.book-sticky {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff5a3c;
+  color: white;
+  padding: 1rem 1.6rem;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 8px 25px rgba(0,0,0,.25);
+  cursor: pointer;
+}
+
+.modal.hidden { display: none; }
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: grid;
+  place-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 14px;
+  position: relative;
+  min-width: 300px;
+}
+
+.close-modal {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+:root {
+  --accent: #ff5a3c;
+  --accent-light: #ff8a6c;
+  --bg: #ffffff;
+  --text: #111;
+}
+
+.dark-mode {
+  --bg: #121212;
+  --text: #eee;
+  --accent: #ff6e40;
+}

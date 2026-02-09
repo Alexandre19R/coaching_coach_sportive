@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="icon" type="image/png" href="img/Logo.svg">
+    <title>Coaching C'Sport</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header-top">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <h1>Coaching C'Sport, n'en rêvez pas, faites le.</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#professional-background">Parcours Professionnel</a></li>
+                <li><a href="#contact-localisation">Contact et Localisation</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="sections-container">
+        <section id="about">
+            <h2>À propos de moi</h2>
+            <p>Bonjour et bienvenue ! Je suis Charlène, coach sportive passionnée et dédiée à vous accompagner dans
+                votre
+                parcours de remise en forme ou d'optimisation de vos performances. Mon approche repose sur l'écoute, la
+                personnalisation et le suivi constant. Que vous soyez débutant ou athlète confirmé, je crée des
+                programmes
+                sur-mesure adaptés à vos objectifs, votre condition physique et vos préférences.</p>
+            <p>Je vous accompagne dans un travail physique et mental et vous aiderai à dépasser vos limites tout en
+                veillant
+                à maintenir une bonne posture et une santé optimale. Rejoignez-moi pour une transformation durable et
+                épanouissante, où chaque étape compte et où votre bien-être est au cœur de mon engagement.</p>
+            <img src="img/coach.JPG" alt="Coach "
+                style="width: 100%; border-radius: 8px; height: 400px; object-fit: cover; ">
+        </section>
+
+        <section id="services">
+            <h2>Mes Services</h2>
+            <div class="sap-banner" id="sapBanner" role="button" tabindex="0" aria-expanded="false">
+                <div class="sap-banner__left">
+                    <div class="sap-logo-box">
+                        <img src="img/logo_SAP.png" alt="Service à la personne">
+                    </div>
+
+                    <div class="sap-banner__text">
+                        <p class="sap-banner__title">Service à la personne</p>
+                        <p class="sap-banner__subtitle">Réduction tarifaire sur les coachings</p>
+                    </div>
+                </div>
+
+                <div class="sap-banner__cta" aria-hidden="true">
+                    <span>En savoir plus</span>
+                    <span class="sap-banner__chev">›</span>
+                </div>
+
+                <div class="sap-popover" id="sapPopover" role="dialog" aria-hidden="true"
+                    aria-label="Informations service à la personne">
+                    <h4>À propos du service à la personne</h4>
+                    <p>
+                        Les séances de coaching sont éligibles au service à la personne.
+                        Après déclaration, vous pouvez bénéficier d’un crédit d’impôt correspondant généralement
+                        à 50% des sommes dépensées (selon conditions), ce qui signifie qu’une séance à 40€ peut
+                        revenir à 20€ après avantage fiscal. Plus d’informations sur le site officiel :
+                        <a href="https://www.servicesalapersonne.gouv.fr/" target="_blank" rel="noopener noreferrer">
+                            servicesalapersonne.gouv.fr
+                        </a>.
+                    </p>
+                    <p class="sap-popover__note">
+                        Une question ? Contactez-moi et je vous explique les démarches.
+                    </p>
+
+                    <button type="button" class="sap-popover__close" id="sapClose" aria-label="Fermer">
+                        Fermer
+                    </button>
+                </div>
+            </div>
+
+            <div class="slider-container">
+                <button class="slider-btn left">&lt;</button>
+
+                <div class="slider-frame">
+                    <div class="slider-inner">
+                        <div class="service-card">
+                            <img src="img/DSC_1318.JPG" alt="Coaching Personnel">
+                            <h3>Coaching personnalisé et individuel</h3>
+                            <p>Un premier contact se fera au téléphone pour définir vos objectifs, suivi d'une prise de
+                                rendez-vous.
+                                La durée des séances est d'une heure.</p>
+                            <div class="pricing">
+                                <p>Tarif : 40€ / séance</p>
+                                <p>Une majoration de 10€ s'applique le dimanche</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <img src="img/DSC_1335.JPG" alt="Entraînement de Groupe">
+                            <h3>Coaching duo/trio</h3>
+                            <p>Séance adaptée au niveau de chacun, la prise de rendez-vous se fait par téléphone et la
+                                durée des
+                                séances est d'1h15</p>
+                            <div class="pricing">
+                                <p>Tarif : 70€ / séance</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <h3>Coaching Collectif en Entreprise</h3>
+                            <p>Des sessions de coaching sportif adaptées aux besoins des entreprises pour améliorer le
+                                bien-être
+                                au
+                                travail.</p>
+                            <div class="pricing">
+                                <p>Tarif : 12€ / personne</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <img src="img/foot_action.jpg" alt="Coaching Performance Football">
+                            <h3>Coaching Performance Football</h3>
+                            <p>Un coaching technique et physique pour améliorer vos performances footballistiques.</p>
+                            <div class="pricing">
+                                <p>Tarif : 40€ / séance (1 heure)</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <h3>Déplacements supérieurs à 20 km</h3>
+                            <p>Pour les déplacements supérieurs à 20km autour d'Auragne, une majoration s'applique pour
+                                couvrir
+                                les
+                                frais kilométriques.</p>
+                            <div class="pricing">
+                                <p>Tarif pour un déplacement en 21 et 30 km: +5€ </p>
+                                <p>Tarif pour un déplacement en 31 et 40 km: +10€ </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slider-btn right">&gt;</button>
+            </div>
+        </section>
+
+        <section id="professional-background">
+            <h2>Mon Parcours Professionnel</h2>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <h3>2006</h3>
+                    <p>Mon premier diplôme : "jeune animatrice de football"</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>2010</h3>
+                    <p>
+                        J'ai travaillé avec
+                        <a href="https://fr.wikipedia.org/wiki/Erick_Mombaerts" target="_blank"
+                            rel="noopener noreferrer" class="external-link">
+                            Erick Mombaerts
+                        </a>, un grand homme du football français.
+                    </p>
+                    <img src="img/travail_errick_monbaerts_2010.jpg" alt="Travail avec Erick Mombaerts en 2010">
+                </div>
+
+
+                <div class="timeline-item">
+                    <h3>2010 et 2011</h3>
+                    <p>J'ai obtenu mon diplôme initiateur (certificat fédéral délivré par la FFF) de premier et deuxième
+                        degrès.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>2012</h3>
+                    <p>J'ai été récompensée par <a href="https://fr.wikipedia.org/wiki/Bruno_Bini" target="_blank"
+                            rel="noopener noreferrer" class="external-link">
+                            Bruno Bini
+                        </a>, un grand homme du football français. qui était l'entraîneur de l'équipe de France Féminine
+                        à cette
+                        époque.</p>
+                    <img src="img/recompense_mr_bini_selectionneur_equipe_fff_fem_2012.jpg"
+                        alt="récompensée par monsieur Bini">
+                </div>
+
+                <div class="timeline-item">
+                    <h3>2013</h3>
+                    <p>J'ai été récompensée par le concours "femme et sport" </p>
+                    <img src="img/concours_femme_et_sport_2013.jpg" alt="récompensée du prix femme et sport">
+                </div>
+
+                <div class="timeline-item">
+                    <h3>2017</h3>
+                    <p>J'ai obtenu le BAFA option adolescents et enfants porteurs de handicap. Ainsi que le PSC1 pour
+                        connaître les gestes qui sauvent.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>2020</h3>
+                    <p>Diplôme d'état d'éducateur sportif mention football.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>2021</h3>
+                    <p>J'ai été formée à la préparation mentale sur la plateforme LNF.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>25 ans de football !</h3>
+                    <p>Dont plus de 10 ans à haut niveau notamment au TFC.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Plus de 10 ans de coaching sportif.</h3>
+                    <p>Dans de multiples disciplines et à des postes incluant du management, de la gestion et de la
+                        programmation d'entraînement.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact-localisation">
+            <h2>Contact et Localisation</h2>
+            <div class="contact-info">
+                <div class="address">
+                    <h3>Mobilité et Horaires.</h3>
+                    <p>Je me déplace à domicile autour d'Auragne (31190). </p>
+                    <p>Vous pouvez faire appel à mes services dans un rayon de 20 km.</p>
+                    <p>Du Lundi au Samedi : de 8h à 20h.</p>
+                    <p>Le Dimanche : sur demande.</p>
+                </div>
+
+                <div class="phone">
+                    <h3>Numéro de téléphone et adresse mail.</h3>
+                    <p>Téléphone : 06 15 16 55 38</p>
+                    <p>Mail : charlenecoachingcsport@gmail.com</p>
+                    <p>Mes disponibilités vous seront communiquées lors de la prise de rendez-vous par téléphone ou par
+                        mail.</p>
+                </div>
+                <img src="img/localisation.png" alt="Image de Localisation"
+                    style="width: 80%; border-radius: 8px; object-fit: cover; height : 610px; display: block; margin-left: auto; margin-right: auto; ">
+
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3>Coaching C'Sport</h3>
+                <p>
+                    Coaching sportif personnalisé à domicile autour d'Auragne.
+                    Pour tous niveaux et tous objectifs.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#professional-background">Parcours</a></li>
+                    <li><a href="#contact-localisation">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>📞 06 15 16 55 38</p>
+                <p>✉️ charlenecoachingcsport@gmail.com</p>
+
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/coachingcsport" target="_blank">
+                        <img src="img/icons8-instagram-96.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Coaching C'Sport – Tous droits réservés
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
