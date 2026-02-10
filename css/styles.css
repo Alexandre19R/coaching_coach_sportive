@@ -813,6 +813,19 @@ p, li, a, h1, h2, h3, h4 {
   .footer-col {
     min-width: 0;
   }
+  footer {
+    text-align: center;
+  }
+
+  footer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer a img {
+    margin: 10px auto 0;
+  }
 }
 
 /* =========================================================
