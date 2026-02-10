@@ -608,105 +608,245 @@ h2 {
 
 
 
-/* Responsive mobile */
-@media (max-width: 480px) {
-    .popup-content {
-        width: 95%;
-        padding: 18px;
-    }
+/* --- Base anti scroll horizontal & cohérence responsive --- */
+*, *::before, *::after { box-sizing: border-box; }
 
-    .popup-content textarea {
-        min-height: 100px;
-    }
+html, body {
+  width: 100%;
+  overflow-x: hidden;         /* sécurité */
+  scroll-behavior: smooth;    /* ancres fluides */
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;             /* évite les petits débordements inline */
+}
 
-/*  --- Responsive Design --- */
+/* Optionnel (recommandé) : éviter les longues chaînes qui débordent */
+p, li, a, h1, h2, h3, h4 {
+  overflow-wrap: anywhere;
+}
 
-/* Tablettes */
+/* =========================================================
+   TABLETTES (<= 1024px)
+   ========================================================= */
 @media (max-width: 1024px) {
-    header {
-        padding: 100px 20px;
-        background-position: center top;
-    }
+  header {
+    padding: 90px 20px;
+    background-position: center top;
+  }
 
-    header h1 {
-        font-size: 36px;
-    }
+  header h1 {
+    font-size: 34px;
+  }
 
-    .services {
-        justify-content: center;
-    }
+  /* Services en grille plus confortable */
+  .services {
+    justify-content: center;
+  }
 
-    .service-card {
-        width: 45%;
-    }
+  .service-card {
+    width: 46%;
+  }
 
-    .timeline-item img {
-        width: 100%;
-        height: auto;
-    }
+  /* Timeline images fluides */
+  .timeline-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Contact : garder 2 colonnes tant que possible */
+  .contact-info {
+    gap: 20px;
+  }
+
+  /* Formulaire jamais trop large */
+  .contact-form {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
-/* Mobiles */
+/* =========================================================
+   MOBILES (<= 768px)
+   ========================================================= */
 @media (max-width: 768px) {
-    header {
-        padding: 60px 15px;
-        text-align: center;
-    }
+  /* Header */
+  header {
+    padding: 60px 15px;
+    text-align: center;
+  }
 
-    header .logo {
-        position: static;
-        margin: 0 auto 10px;
-        display: block;
-    }
+  .header-top {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 0;  /* tu avais un margin-top négatif -> risqué sur mobile */
+  }
 
-    header h1 {
-        font-size: 28px;
-        line-height: 1.3;
-    }
+  .logo {
+    width: 96px;
+  }
 
-    nav ul li {
-        display: block;
-    }
+  header h1 {
+    font-size: 26px;
+    line-height: 1.25;
+  }
 
-    nav ul li a {
-        padding: 10px;
-        font-size: 18px;
-    }
+  /* Hero (si tu l’as ajouté) */
+  .hero {
+    margin-top: 14px;
+    max-width: 100%;
+  }
 
-    .services {
-        flex-direction: column;
-        align-items: center;
-    }
+  .hero-cta {
+    justify-content: center;
+  }
 
-    .service-card {
-        width: 90%;
-    }
+  .hero-badges {
+    justify-content: center;
+  }
 
-    .contact-info {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+  /* Navigation (menu vertical) */
+  nav ul li {
+    display: block;
+  }
 
-    .timeline {
-        border-left: none;
-        border-top: 3px solid #1976d2;
-        padding-top: 20px;
-    }
+  nav ul li a {
+    padding: 12px 12px;
+    font-size: 17px;
+  }
 
-    .timeline-item {
-        padding-left: 0;
-        text-align: center;
-    }
+  /* Sections : respirent mieux sur mobile */
+  section {
+    padding: 36px 16px;
+    margin: 16px auto;
+  }
 
-    .timeline-item:before {
-        display: none;
-    }
+  h2 {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
 
-    .timeline-item img {
-        width: 100%;
-        height: auto;
-    }
+  /* Services : 1 colonne */
+  .services {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .service-card {
+    width: 100%;
+  }
+
+  .service-card img {
+    height: 220px;
+  }
+
+  /* ===== Contact / Localisation : 50/50 -> 100% + 100% ===== */
+  .contact-info {
+    flex-direction: column;
+    align-items: stretch;   /* IMPORTANT : pas center (cause du débordement) */
+    text-align: center;
+    gap: 18px;
+  }
+
+  /* Empêche les enfants flex de forcer un débordement */
+  .contact-info > * {
+    min-width: 0;
+  }
+
+  .address,
+  .contact-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Formulaire : inputs toujours à 100% */
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    width: 100%;
+  }
+
+  /* Carte / rayon d'action */
+  .localisation-map {
+    margin-top: 22px;
+    text-align: center;
+  }
+
+  .localisation-map img {
+    width: 100%;
+    max-height: 520px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  /* ===== Timeline ===== */
+  .timeline {
+    border-left: none;
+    border-top: 3px solid #1976d2;
+    padding-top: 18px;
+  }
+
+  .timeline-item {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .timeline-item:before {
+    display: none;
+  }
+
+  .timeline-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 16px;
+  }
+
+  .footer-col {
+    min-width: 0;
+  }
+}
+
+/* =========================================================
+   PETITS MOBILES (<= 480px)
+   ========================================================= */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    padding: 11px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .service-card {
+    padding: 16px;
+  }
+
+  .service-card img {
+    height: 200px;
+  }
+
+  /* Si tu as un popup, on garde ton code + on sécurise */
+  .popup-content {
+    width: 95%;
+    padding: 18px;
+  }
+
+  .popup-content textarea {
+    min-height: 100px;
+  }
 }
