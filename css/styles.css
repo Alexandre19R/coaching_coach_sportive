@@ -509,8 +509,7 @@ h2 {
   }
 }
 .localisation-map {
-    margin-top: 30px;
-    text-align: center;
+     margin: 30px auto 0;
     width: 90%;
 }
 
